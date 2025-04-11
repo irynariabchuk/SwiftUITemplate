@@ -8,10 +8,11 @@
 import Foundation
 
 // MARK: - HomeViewModel
+// MARK: - HomeViewModel
 final class HomeViewModel: ObservableObject {
     
     // MARK: - Private Properties
-    let serviceContainer: ServiceContainerProtocol
+    let networkService: HomeNetworkServiceProtocol
     
     let categories: [Category] = [
         Category(name: "General", icon: "square.grid.2x2.fill", color: .blue),
@@ -26,13 +27,22 @@ final class HomeViewModel: ObservableObject {
     @Published var state: HomeState = .idle
     
     // MARK: - Init
-    init(serviceContainer: ServiceContainerProtocol) {
-        self.serviceContainer = serviceContainer
+    init(networkService: HomeNetworkServiceProtocol) {
+        self.networkService = networkService
     }
     
     // MARK: - Public Methods
     @MainActor
     func fetch() async {
-        state = .loading        
+        // TODO: - Just for example
+        state = .loading
+
+        do {
+            let result = try await networkService.fetchData()
+            print("Fetched: \(result.message)")
+            state = .idle
+        } catch {
+            state = .error(error.localizedDescription)
+        }
     }
 }

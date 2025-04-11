@@ -13,10 +13,19 @@ struct HomeView: View {
     // MARK: - Public Properties
     @ObservedObject var viewModel: HomeViewModel
     
+    // MARK: - Private Properties
+    @Environment(\.resolver) private var resolver
+    @State private var selectedID: String?
+    
     // MARK: - Views
     var body: some View {
         NavigationStack {
             mainView
+                .navigationDestination(item: $selectedID) { id in
+                    HomeDetailsView(
+                        viewModel: resolver.resolve(HomeDetailsViewModel.self, argument: id)!
+                    )
+                }
         }
         .errorAlert(
             isPresented: .constant(viewModel.state.isError),
@@ -52,7 +61,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                     }
                     .onTapGesture {
-                        print(category.name)
+                        selectedID = category.name
                     }
                 }
             }

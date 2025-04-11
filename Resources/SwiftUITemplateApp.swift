@@ -9,14 +9,15 @@ import SwiftUI
 
 @main
 struct SwiftUITemplateApp: App {
+    
     // MARK: - Private Properties
     private let container = DependencyContainer()
-    
-    var body: some Scene {
-        let viewModel = HomeViewModel(serviceContainer: container)
 
+    var body: some Scene {
         WindowGroup {
+            let viewModel = container.resolver.resolve(HomeViewModel.self)!
             HomeView(viewModel: viewModel)
+                .environment(\.resolver, container.resolver)
         }
     }
 }

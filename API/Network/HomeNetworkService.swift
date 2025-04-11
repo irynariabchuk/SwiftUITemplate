@@ -1,5 +1,5 @@
 //
-//  ExampleNetworkService.swift
+//  HomeNetworkService.swift
 //  ___PACKAGENAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-// MARK: - ExampleNetworkServiceProtocol
-protocol ExampleNetworkServiceProtocol {
-    func fetchData(by searchText: String) async throws -> ErrorMain
+// MARK: - HomeNetworkServiceProtocol
+protocol HomeNetworkServiceProtocol {
+    func fetchData() async throws -> ErrorMain
 }
 
-// MARK: - ExampleNetworkService
-final class ExampleNetworkService: ExampleNetworkServiceProtocol {
+// MARK: - HomeNetworkService
+final class HomeNetworkService: HomeNetworkServiceProtocol {
     
     // MARK: - Private Properties
     private let networkManager: NetworkManagerProtocol
@@ -24,13 +24,13 @@ final class ExampleNetworkService: ExampleNetworkServiceProtocol {
     }
     
     // MARK: - Public Methods
-    func fetchData(by searchText: String) async throws -> ErrorMain {
+    func fetchData() async throws -> ErrorMain {
         /*
         guard let url = Endpoint.test(searchText).url else {
             throw URLError(.badURL)
         }
         
-        let weatherData: ExampleModel = try await performRequest(
+        let model: ExampleModel = try await performRequest(
             url: url,
             method: .get,
             headers: nil,
@@ -38,7 +38,7 @@ final class ExampleNetworkService: ExampleNetworkServiceProtocol {
             responseType: ExampleModel.self
         )
         
-        return weatherData
+        return model
          */
         ErrorMain(code: 1000, message: "test")
     }

@@ -82,16 +82,22 @@
         <string>Screens/Home/HomeView.swift</string>
         <string>Screens/Home/HomeViewModel.swift</string>
         <string>Screens/Home/State/HomeState.swift</string>
+        <string>Screens/HomeDetails/HomeDetailsView.swift</string>
+        <string>Screens/HomeDetails/HomeDetailsViewModel.swift</string>
+        <string>Screens/HomeDetails/State/HomeDetailsState.swift</string>
         <string>API/Entities/ErrorMain.swift</string>
         <string>API/Entities/Category.swift</string>
-        <string>API/Network/ExampleNetworkService.swift</string>
+        <string>API/Network/HomeNetworkService.swift</string>
+        <string>API/Network/HomeDetailsNetworkService.swift</string>
         <string>API/Network/Base/Endpoint.swift</string>
         <string>API/Network/Base/HTTPMethod.swift</string>
         <string>API/Network/Base/NetworkError.swift</string>
         <string>API/Network/Base/NetworkManager.swift</string>
-        <string>API/Network/Base/ServiceContainer.swift</string>
+        <string>Base/Assembly/DependencyContainer.swift</string>
+        <string>Base/Assembly/ViewModelAssembly.swift</string>
+        <string>Base/Assembly/ServiceAssembly.swift</string>      
+        <string>Base/Assembly/ResolverKey.swift</string>
         <string>Base/APIConfig.swift</string>
-        <string>Base/DependencyContainer.swift</string>
         <string>Base/ImageView.swift</string>
         <string>Extensions/Color+Extension.swift</string>
         <string>Extensions/Font+Extension.swift</string>
@@ -123,6 +129,7 @@
         </dict>
 
         <!-- Screens -->
+        <!-- Home -->
         <key>Screens/Home/HomeView.swift</key>
         <dict>
             <key>Path</key>
@@ -154,6 +161,38 @@
                 <string>State</string>
             </array>
         </dict>
+        <!-- HomeDetails-->
+        <key>Screens/HomeDetails/HomeDetailsView.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>Screens/HomeDetails/HomeDetailsView.swift</string>
+            <key>Group</key>
+            <array>
+                <string>Screens</string>
+                <string>HomeDetails</string>
+            </array>
+        </dict>
+        <key>Screens/HomeDetails/HomeDetailsViewModel.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>Screens/HomeDetails/HomeDetailsViewModel.swift</string>
+            <key>Group</key>
+            <array>
+                <string>Screens</string>
+                <string>HomeDetails</string>
+            </array>
+        </dict>
+        <key>Screens/HomeDetails/State/HomeDetailsState.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>Screens/HomeDetails/State/HomeDetailsState.swift</string>
+            <key>Group</key>
+            <array>
+                <string>Screens</string>
+                <string>HomeDetails</string>
+                <string>State</string>
+            </array>
+        </dict>
 
         <!-- API -->
         <key>API/Entities/ErrorMain.swift</key>
@@ -176,16 +215,27 @@
                 <string>Entities</string>
             </array>
         </dict>
-        <key>API/Network/ExampleNetworkService.swift</key>
+        <key>API/Network/HomeNetworkService.swift</key>
         <dict>
             <key>Path</key>
-            <string>API/Network/ExampleNetworkService.swift</string>
+            <string>API/Network/HomeNetworkService.swift</string>
             <key>Group</key>
             <array>
                 <string>API</string>
                 <string>Network</string>
             </array>
         </dict>
+        <key>API/Network/HomeDetailsNetworkService.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>API/Network/HomeDetailsNetworkService.swift</string>
+            <key>Group</key>
+            <array>
+                <string>API</string>
+                <string>Network</string>
+            </array>
+        </dict>
+
         <key>API/Network/Base/Endpoint.swift</key>
         <dict>
             <key>Path</key>
@@ -230,29 +280,51 @@
                 <string>Base</string>
             </array>
         </dict>
-        <key>API/Network/Base/ServiceContainer.swift</key>
+        <!-- Base files -->
+        <key>Base/Assembly/DependencyContainer.swift</key>
         <dict>
             <key>Path</key>
-            <string>API/Network/Base/ServiceContainer.swift</string>
+            <string>Base/Assembly/DependencyContainer.swift</string>
             <key>Group</key>
             <array>
                 <string>Base</string>
+                <string>Assembly</string>
             </array>
         </dict>
-        <!-- Base files -->
+        <key>Base/Assembly/ViewModelAssembly.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>Base/Assembly/ViewModelAssembly.swift</string>
+            <key>Group</key>
+            <array>
+                <string>Base</string>
+                <string>Assembly</string>
+            </array>
+        </dict>
+        <key>Base/Assembly/ServiceAssembly.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>Base/Assembly/ServiceAssembly.swift</string>
+            <key>Group</key>
+            <array>
+                <string>Base</string>
+                <string>Assembly</string>
+            </array>
+        </dict>
+        <key>Base/Assembly/ResolverKey.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>Base/Assembly/ResolverKey.swift</string>
+            <key>Group</key>
+            <array>
+                <string>Base</string>
+                <string>Assembly</string>
+            </array>
+        </dict>
         <key>Base/APIConfig.swift</key>
         <dict>
             <key>Path</key>
             <string>Base/APIConfig.swift</string>
-            <key>Group</key>
-            <array>
-                <string>Base</string>
-            </array>
-        </dict>
-        <key>Base/DependencyContainer.swift</key>
-        <dict>
-            <key>Path</key>
-            <string>Base/DependencyContainer.swift</string>
             <key>Group</key>
             <array>
                 <string>Base</string>
