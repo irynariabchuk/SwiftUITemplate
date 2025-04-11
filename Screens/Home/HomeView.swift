@@ -52,7 +52,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                     }
                     .onTapGesture {
-                        selectedID = category.name
+                        print(category.name)
                     }
                 }
             }
