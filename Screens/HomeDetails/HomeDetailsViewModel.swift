@@ -15,7 +15,7 @@ final class HomeDetailsViewModel: ObservableObject {
     let id: String
     
     // MARK: - Public Properties
-    @Published var state: HomeDetails = .idle
+    @Published var state: HomeDetailsState = .idle
     
     // MARK: - Init
     init(networkService: HomeDetailsNetworkServiceProtocol, id: String) {

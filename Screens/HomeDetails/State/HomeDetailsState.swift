@@ -11,7 +11,7 @@ import Foundation
 extension HomeDetailsViewModel {
     
     // MARK: - HomeDetailsState
-    enum HomeDetailseState {
+    enum HomeDetailsState {
         case idle
         case loading
         case error(String)
