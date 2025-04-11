@@ -38,9 +38,10 @@ The **SwiftUI Template** provides:
 Since Xcode templates don’t directly support adding Swift package dependencies, follow these steps to manually add SDWebImageSwiftUI:
 
 1. Go to **File → Add Packages**….
-2. . Enter the package URL:
-   ```bash
-    https://github.com/SDWebImage/SDWebImageSwiftUI
+2. Added SPM:
+- `https://github.com/SDWebImage/SDWebImageSwiftUI.git`
+- `https://github.com/Swinject/Swinject.git`
+  
 3. Select the Up to Next Major Version rule and ensure the version is set.
 4. Click **Add Package**, and Xcode will automatically link the package to your project.
 
