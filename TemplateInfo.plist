@@ -160,6 +160,15 @@
         <dict>
             <key>Path</key>
             <string>API/Entities/ErrorMain.swift</string>
+            <key>Group</key>
+            <array>
+                <string>API</string>
+                <string>Entities</string>
+            </array>
+        </dict>
+        <key>API/Entities/Category.swift</key>
+        <dict>
+            <key>Path</key>
             <string>API/Entities/Category.swift</string>
             <key>Group</key>
             <array>
