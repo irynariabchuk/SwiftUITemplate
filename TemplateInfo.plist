@@ -83,6 +83,7 @@
         <string>Screens/Home/HomeViewModel.swift</string>
         <string>Screens/Home/State/HomeState.swift</string>
         <string>API/Entities/ErrorMain.swift</string>
+        <string>API/Entities/Category.swift</string>
         <string>API/Network/ExampleNetworkService.swift</string>
         <string>API/Network/Base/Endpoint.swift</string>
         <string>API/Network/Base/HTTPMethod.swift</string>
@@ -159,6 +160,7 @@
         <dict>
             <key>Path</key>
             <string>API/Entities/ErrorMain.swift</string>
+            <string>API/Entities/Category.swift</string>
             <key>Group</key>
             <array>
                 <string>API</string>

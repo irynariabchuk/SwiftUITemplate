@@ -31,12 +31,33 @@ struct HomeView: View {
     
     @ViewBuilder
     var mainView: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello!")
+        ZStack {
+            LinearGradient(colors: [.black, .purple.opacity(0.7)], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: 2), spacing: 20) {
+                ForEach(viewModel.categories) { category in
+                    VStack(spacing: 12) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                .fill(Color.white.opacity(0.05))
+                                .frame(height: 100)
+                            
+                            Image(systemName: category.icon)
+                                .font(.system(size: 30))
+                                .foregroundColor(category.color)
+                        }
+                        
+                        Text(category.name)
+                            .font(.subheadline)
+                            .foregroundColor(.white)
+                    }
+                    .onTapGesture {
+                        selectedID = category.name
+                    }
+                }
+            }
+            .padding(.horizontal)
+            .padding(.top)
         }
-        .padding()
     }
 }
