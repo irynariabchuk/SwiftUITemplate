@@ -35,7 +35,7 @@ The **SwiftUI Template** provides:
 7. Xcode will generate a new project based on the SwiftUITemplate. 🎉
 
 ### Step 3: ⚡️ Adding Dependencies
-Since Xcode templates don’t directly support adding Swift package dependencies, follow these steps to manually add SDWebImageSwiftUI:
+Since Xcode templates don’t directly support adding Swift package dependencies, follow these steps to manually add packages:
 
 1. Go to **File → Add Packages**….
 2. Added SPM:
