@@ -24,11 +24,6 @@ final class ServiceAssembly: Assembly {
             let networkManager = resolver.resolve(NetworkManagerProtocol.self)!
             return HomeNetworkService(networkManager: networkManager)
         }
-        
-        container.register(HomeDetailsNetworkServiceProtocol.self) { resolver in
-            let networkManager = resolver.resolve(NetworkManagerProtocol.self)!
-            return HomeDetailsNetworkService(networkManager: networkManager)
-        }
     }
 }
 

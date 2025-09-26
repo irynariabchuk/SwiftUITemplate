@@ -26,13 +26,13 @@ extension NetworkError: LocalizedError {
         case .serverError(let error):
             return "error.server_code".localizeWithFormat(arguments: error.message, error.code)
         case .noInternet:
-            return "error.no_internet"
+            return String(localized: "error.no_internet")
         case .timeout:
-            return "error.timeout"
+            return String(localized: "error.timeout")
         case .statusCode(let code):
             return "error.http_status".localizeWithFormat(arguments: code)
         case .invalidResponse:
-            return "error.invalid_response"
+            return String(localized: "error.invalid_response")
         case .decodingError(let decodingError):
             return "error.failed_decode".localizeWithFormat(arguments: decodingError.localizedDescription)
         case .urlError(let urlError):

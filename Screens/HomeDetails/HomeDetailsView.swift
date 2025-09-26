@@ -32,9 +32,6 @@ struct HomeDetailsView: View {
                 ProgressView()
             }
         }
-        .task {
-            await viewModel.fetch()
-        }
     }
     
     @ViewBuilder
