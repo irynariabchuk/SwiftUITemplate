@@ -208,7 +208,7 @@
        <key>API/Network/Base/APIConstants.swift</key>
        <dict>
             <key>Path</key>
-            <string>/Network/Base/APIConstants.swift</string>
+            <string>API/Network/Base/APIConstants.swift</string>
             <key>Group</key>
             <array>
                 <string>API</string>
