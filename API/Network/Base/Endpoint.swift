@@ -19,6 +19,6 @@ enum Endpoint {
     }
     
     var url: URL? {
-        return URL(string: "https://" + APIConfig.baseURL + path + "&key=\(APIConfig.apiKey)")
+        return URL(string: APIConstants.baseURL + path)
     }
 }
