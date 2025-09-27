@@ -25,21 +25,6 @@ final class HomeNetworkService: HomeNetworkServiceProtocol {
     
     // MARK: - Public Methods
     func fetchData() async throws -> ErrorMain {
-        /*
-        guard let url = Endpoint.test(searchText).url else {
-            throw URLError(.badURL)
-        }
-        
-        let model: ExampleModel = try await performRequest(
-            url: url,
-            method: .get,
-            headers: nil,
-            body: nil,
-            responseType: ExampleModel.self
-        )
-        
-        return model
-         */
         ErrorMain(code: 1000, message: "test")
     }
 }

@@ -78,7 +78,6 @@
     <!-- File structure of the template -->
     <key>Nodes</key>
     <array>
-        <string>Config.xcconfig</string>
         <string>Screens/Home/HomeView.swift</string>
         <string>Screens/Home/HomeViewModel.swift</string>
         <string>Screens/Home/State/HomeState.swift</string>
@@ -91,11 +90,11 @@
         <string>API/Network/Base/HTTPMethod.swift</string>
         <string>API/Network/Base/NetworkError.swift</string>
         <string>API/Network/Base/NetworkManager.swift</string>
+        <string>API/Network/Base/APIConstants.swift</string>
         <string>Base/Assembly/DependencyContainer.swift</string>
         <string>Base/Assembly/ViewModelAssembly.swift</string>
         <string>Base/Assembly/ServiceAssembly.swift</string>      
         <string>Base/Assembly/ResolverKey.swift</string>
-        <string>Base/APIConfig.swift</string>
         <string>Base/ImageView.swift</string>
         <string>Extensions/Color+Extension.swift</string>
         <string>Extensions/Font+Extension.swift</string>
@@ -117,13 +116,6 @@
         <dict>
             <key>Path</key>
             <string>SwiftUITemplateApp.swift</string>
-        </dict>
-
-        <!-- Config file -->
-        <key>Config.xcconfig</key>
-        <dict>
-            <key>Path</key>
-            <string>Config.xcconfig</string>
         </dict>
 
         <!-- Screens -->
@@ -201,6 +193,16 @@
             <array>
                 <string>API</string>
                 <string>Entities</string>
+            </array>
+        </dict>
+       <key>API/Network/HomeNetworkService.swift</key>
+       <dict>
+            <key>Path</key>
+            <string>API/Network/APIConstants.swift</string>
+            <key>Group</key>
+            <array>
+                <string>API</string>
+                <string>Network</string>
             </array>
         </dict>
         <key>API/Network/HomeNetworkService.swift</key>
@@ -298,15 +300,7 @@
                 <string>Assembly</string>
             </array>
         </dict>
-        <key>Base/APIConfig.swift</key>
-        <dict>
-            <key>Path</key>
-            <string>Base/APIConfig.swift</string>
-            <key>Group</key>
-            <array>
-                <string>Base</string>
-            </array>
-        </dict>
+
         <key>Base/ImageView.swift</key>
         <dict>
             <key>Path</key>
