@@ -16,10 +16,5 @@ final class ViewModelAssembly: Assembly {
             let service = resolver.resolve(HomeNetworkServiceProtocol.self)!
             return HomeViewModel(networkService: service)
         }
-        
-        container.register(HomeDetailsViewModel.self) { (resolver, id: String) in
-            let service = resolver.resolve(HomeDetailsNetworkServiceProtocol.self)!
-            return HomeDetailsViewModel(networkService: service, id: id)
-        }
     }
 }
